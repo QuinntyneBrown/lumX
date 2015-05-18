@@ -10,6 +10,8 @@ angular.module('lumx.notification', [])
             notificationOffset = value;
         };
         this.$get = ['$injector', '$rootScope', '$timeout', function ($injector, $rootScope, $timeout) {
+
+            notificationOffset = notificationOffset || 24;
             //
             // PRIVATE MEMBERS
             //
