@@ -9,7 +9,7 @@ angular.module('lumx.notification', [])
         this.setNotificationOffset = function (value) {
             notificationOffset = value;
         };
-        this.$get = ['$injector', '$rootScope', '$timeout', function ($injector, $rootScope, $timeout, $window) {
+        this.$get = ['$injector', '$rootScope', '$timeout', function ($injector, $rootScope, $timeout) {
 
             notificationOffset = notificationOffset || 24;
             //
@@ -269,7 +269,7 @@ angular.module('lumx.notification', [])
             }
 
             function getBodyElement() {
-                return createElement($window.document.body);
+                return createElement(document.body);
             }
 
             function createElement(element) {
