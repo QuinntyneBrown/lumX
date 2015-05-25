@@ -269,7 +269,7 @@ angular.module('lumx.notification', [])
             }
 
             function getBodyElement() {
-                return createElement(document.body);
+                return createElement(window.document.body);
             }
 
             function createElement(element) {
